@@ -3,7 +3,8 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.uix.image import Image
 import hangman_game
-
+from kivy.core.window import Window
+Window.clearcolor = (1, 1, 1, .1)
 
 
 class MyImage(Image):
@@ -19,7 +20,8 @@ class MyLabel(Label):
 
 
 class mainApp(App):
-    i1 = Image(source='test.jpg')
+    i1 = MyImage
+    i1.source= 'test.png'
     
     word = hangman_game.get_word()
     m1 = MyLabel

@@ -1,12 +1,16 @@
 
-<MyLabel>
-  
+<MyLabel>:
+    color: '000000'
+    
 <Button>:
     size_hint:.2,.2
+    radius : [50,]
+    background_normal : 'orange.png'
+    background_down : 'green.png'
 
 <GridLayout>:
     rows : 3
-    spacing : 0
+    spacing : 2
 
     BoxLayout:
         orientation: 'horizontal'
@@ -14,15 +18,20 @@
         StackLayout:
             
             MyLabel:
-                color:1,1,1,1
+                color:0,0,0,1
 
             
-        Image:
-            height:self.parent.height
-            width:self.parent.width
+        MyImage:
+            allow_stretch: True
+            keep_ratio: True
+            size_hint_y: 1
+            size_hint_x: 1
+            width: self.parent.width
+            height: self.parent.width/self.image_ratio
             
     
     StackLayout:
+        spacing:1
         Button:
             text:"A"
            
@@ -116,6 +125,7 @@
             
             color: 1,1,1,1
     Button:
+        
         text:"Z"
         size_hint:1,.1
         color: 1,1,1,1
