@@ -8,20 +8,24 @@
     background_normal : 'orange.png'
     background_down : 'green.png'
 
-<GridLayout>:
+<MyGridLayout>:
     rows : 3
     spacing : 2
+    display:display
+    im:im
 
     BoxLayout:
         orientation: 'horizontal'
         
         StackLayout:
             
-            MyLabel:
+            Label:
+                id:display
                 color:0,0,0,1
 
             
-        MyImage:
+        Image:
+            id:im
             allow_stretch: True
             keep_ratio: True
             size_hint_y: 1
@@ -34,99 +38,146 @@
         spacing:10
         orientation: 'lr-tb'
         Button:
+            
             text:"A"
-           
+            on_press: root.PressbtnA()
             color: 1,1,1,1
         Button:
+            id:b
             text:"B"
+            on_press: root.PressbtnB()
            
             color: 1,1,1,1
         Button:
+            id:c
             text:"C"
+            on_press: root.PressbtnC()
            
             color: 1,1,1,1
         Button:
+            id:d
             text:"D"
+            on_press: root.PressbtnD()
             
             color: 1,1,1,1
         Button:
+            id:e    
             text:"E"
+            on_press: root.PressbtnE()
             
             color: 1,1,1,1
         Button:
+            id:f
             text:"F"
+            on_press: root.PressbtnF()
             
             color: 1,1,1,1
         Button:
+            id:g
             text:"G"
+            on_press: root.PressbtnG()
             
             color: 1,1,1,1
         Button:
+            id:h
             text:"H"
+            on_press: root.PressbtnH()
            
             color: 1,1,1,1
         Button:
+            id:i
             text:"I"
             color: 1,1,1,1
+            on_press: root.PressbtnI()
         Button:
+            id:j
             text:"J"
             color: 1,1,1,1
+            on_press: root.PressbtnJ()
         Button:
+            id:k
             text:"K"
             color: 1,1,1,1
+            on_press: root.PressbtnK()
         Button:
+            id:l
             text:"L"
             color: 1,1,1,1
+            on_press: root.PressbtnL()
         Button:
+            id:m
             text:"M"
             color: 1,1,1,1
+            on_press: root.PressbtnM()
         Button:
+            id:n
             text:"N"
             color: 1,1,1,1
+            on_press: root.PressbtnN()
         Button:
+            id:o
             text:"O"
             color: 1,1,1,1
+            on_press: root.PressbtnO()
         Button:
+            id:p
             text:"P"
             color: 1,1,1,1
+            on_press: root.PressbtnP()
         Button:
+            id:q
             text:"Q"
+            on_press: root.PressbtnQ()
         
             color: 1,1,1,1
         Button:
+            id:r
             text:"R"
+            on_press: root.PressbtnR()
             
             color: 1,1,1,1
         Button:
+            id:s
             text:"S"
-            
+            on_press: root.PressbtnS()
             color: 1,1,1,1
         Button:
+            id:t
             text:"T"
-            
+            on_press: root.PressbtnT()
             color: 1,1,1,1
         Button:
+            id:u
             text:"U"
+            on_press: root.PressbtnU()
             
             color: 1,1,1,1
         Button:
+            id:v
             text:"V"
-            
+            on_press: root.PressbtnV()
             color: 1,1,1,1
         Button:
+            id:w
             text:"W"
-            
+            on_press: root.PressbtnW()
             color: 1,1,1,1
         Button:
+            id:x
             text:"X"
+            on_press: root.PressbtnX()
             
             color: 1,1,1,1
         Button:
+            id:y
             text:"Y"
+            on_press: root.PressbtnY()
             
             color: 1,1,1,1
         
         Button:
+            id:z
+            on_press: root.PressbtnZ()
         
             text:"Z"
             size_hint:.2,.2
@@ -149,8 +200,9 @@
                 font_size:40
                 color:0,0,0,1
         Button:
-        
+            id:restart 
             text:"Restart"
+            on_press: root.PressbtnRESTART()
             size_hint:1,.25
             pos:
             color: 1,1,1,1

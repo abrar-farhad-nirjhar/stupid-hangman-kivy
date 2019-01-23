@@ -43,17 +43,6 @@ def get_word():
     r = random.randint(0,number_of_words)
     return linecache.getline("words.txt",r)
 
-def get_max_len():
-    max_len=-1
-
-    f = open('words.txt', 'r')
-    for i in f:
-        # print(len(i))
-        if len(i)>max_len:
-            print(len(i))
-    # return linecache.getline("words.txt",r)
-            max_len = len(i)
-    return max_len
 
 
 
@@ -71,4 +60,3 @@ def game():
 
 # game() 
 
-print("This is the max",get_max_len())
