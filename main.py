@@ -21,7 +21,7 @@ class MyLabel(Label):
 
 class mainApp(App):
     i1 = MyImage
-    i1.source= 'test.png'
+    i1.source= '7.png'
     
     word = hangman_game.get_word()
     m1 = MyLabel
@@ -29,10 +29,14 @@ class mainApp(App):
     # m1.font_size = 20
 
     def set_size(self):
-        if len(self.word)>10:
-            self.m1.font_size  = 17
-        else:
+        if len(self.word)>10 and len(self.word)<14: 
+            self.m1.font_size  = 25
+        elif len(self.word)<10:
             self.m1.font_size = 32
+        elif len(self.word)>14 and len(self.word)<25:
+            self.m1.font_size = 20
+        else:
+            self.m1.font_size = 17    
     
     def build(self):
         self.set_size()

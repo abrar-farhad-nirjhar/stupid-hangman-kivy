@@ -31,7 +31,8 @@
             
     
     StackLayout:
-        spacing:1
+        spacing:10
+        orientation: 'lr-tb'
         Button:
             text:"A"
            
@@ -124,9 +125,34 @@
             text:"Y"
             
             color: 1,1,1,1
-    Button:
         
-        text:"Z"
-        size_hint:1,.1
-        color: 1,1,1,1
+        Button:
+        
+            text:"Z"
+            size_hint:.2,.2
+            color: 1,1,1,1
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text:"\\"
+            Label:
+                text: "score 1/5"
+                font_size:40
+
+                color:0,0,0,1
+            
+            Label:
+                text:"Try Again"
+                font_size:40
+                color:0,0,0,1
+        Button:
+        
+            text:"Restart"
+            size_hint:1,.25
+            pos:
+            color: 1,1,1,1
+
         
